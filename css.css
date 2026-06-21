@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0b0b1e;
+    color: #ffffff;
+    padding: 20px 16px 40px 16px;
+}
+
+main {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Identidade Visual */
+@property --bg-cards {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #14142b;
+}
+
+/* Topo do App */
+.header-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 25px 0;
+    padding: 0 4px;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.profile-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #2a2a5a;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Painel de Saldos */
+.patrimonio-box {
+    background: linear-gradient(135deg, #1d1b4c 0%, #14142b 100%);
+    border: 1px solid #2a2a5a;
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.patrimonio-box span {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.patrimonio-box h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0 18px 0;
+}
+
+.sub-cards-container {
+    display: flex;
+    gap: 8px;
+}
+
+.sub-card {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 12px 8px;
+}
+
+.sub-card p {
+    font-size: 8px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.sub-card span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.receitas span { color: #10b981; }
+.gastos span { color: #ef4444; }
+.poupanca span { color: #0ea5e9; }
+
+/* Menu de Ações */
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 0 4px;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    width: 22%;
+}
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-item:nth-child(1) .action-icon { background: linear-gradient(135deg, #4d49fc, #3716a3); }
+.action-item:nth-child(2) .action-icon { background: linear-gradient(135deg, #7be61a, #4d9308); }
+.action-item:nth-child(3) .action-icon { background: linear-gradient(135deg, #a155f7, #6917c2); }
+.action-item:nth-child(4) .action-icon { background: linear-gradient(135deg, #0ea5e9, #026ca1); }
+
+.action-item span {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Slider de Cartões */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 4px;
+}
+
+.section-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-header a {
+    font-size: 13px;
+    color: #0ea5e9;
+    text-decoration: none;
+}
+
+.cards-slider {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cards-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.credit-card {
+    min-width: 260px;
+    width: 80%;
+    height: 160px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nubank { background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%); }
+.inter { background: linear-gradient(135deg, #0284c7 0%, #0f172a 100%); border: 1px solid #222240; }
+
+.card-top {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-bottom strong {
+    color: #ffffff;
+    display: block;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+/* Form de Operações */
+.operacao-box {
+    background-color: var(--bg-cards);
+    border: 1px solid #222240;
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.operacao-box fieldset {
+    border: none;
+}
+
+.operacao-box legend {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0ea5e9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.campo-grupo {
+    margin-bottom: 14px;
+}
+
+.campo-grupo label {
+    display: block;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+.campo-grupo input, 
+.campo-grupo select {
+    width: 100%;
+    background-color: #0b0b1e;
+    border: 1px solid #222240;
+    padding: 10px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.campo-grupo input:focus, 
+.campo-grupo select:focus {
+    outline: none;
+    border-color: #0ea5e9;
+}
+
+.btn-operacao {
+    width: 100%;
+    background: linear-gradient(135deg, #4d49fc, #3716a3);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+/* Tabela de Histórico */
+.transacoes-box {
+    background-color: var(--bg-cards);
+    border: 1px solid #222240;
+    border-radius: 24px;
+    padding: 20px;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela-extrato {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.escondido {
+    display: none;
+}
+
+.tabela-extrato td {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.tabela-extrato tr:last-child td {
+    border-bottom: none;
+}
+
+.col-icone {
+    width: 50px;
+}
+
+.badge-round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsividade Adaptativa */
+@media (max-width: 360px) {
+    .patrimonio-box h1 {
+        font-size: 26px;
+    }
+    .action-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+    }
+}

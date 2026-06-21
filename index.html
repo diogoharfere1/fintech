@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech - Morgana</title>
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="bg-[#0b0b1e] text-white p-4">
+
+    <header class="header-profile">
+        <div class="profile-info">
+            <p>Bom dia,</p>
+            <h2>Morgana 👋</h2>
+        </div>
+        <div class="profile-avatar">
+            <img src="Morg.jpg" alt="Usuario Morgana">
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto">
+        
+        <section class="patrimonio-box rounded-3xl">
+            <span>Patrimônio Total</span>
+            <h1>R$ 10.522,65</h1>
+            
+            <div class="sub-cards-container">
+                <div class="sub-card receitas">
+                    <p>↗ Receitas</p>
+                    <span>+R$ 9.700,00</span>
+                </div>
+                <div class="sub-card gastos">
+                    <p>↘ Gastos</p>
+                    <span>-R$ 3.118,00</span>
+                </div>
+                <div class="sub-card poupanca">
+                    <p>↗ Poupança</p>
+                    <span>R$ 6.582,00</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions-container">
+            <a href="#area-transferencia" class="action-item">
+                <div class="action-icon btn-enviar">➢</div>
+                <span>Enviar</span>
+            </a>
+            <a href="#area-transferencia" class="action-item">
+                <div class="action-icon btn-receber">⇙</div>
+                <span>Receber</span>
+            </a>
+            <a href="#area-transferencia" class="action-item">
+                <div class="action-icon btn-pagar">💳</div>
+                <span>Pagar</span>
+            </a>
+            <a href="#area-transferencia" class="action-item">
+                <div class="action-icon btn-mais">+</div>
+                <span>Mais</span>
+            </a>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h3>Meus Cartões</h3>
+                <a href="#">Ver todos ></a>
+            </div>
+            
+            <div class="cards-slider no-scrollbar">
+                <div class="credit-card nubank">
+                    <div class="card-top">NUBANK</div>
+                    <div class="card-number">•••• •••• •••• 4821</div>
+                    <div class="card-bottom">
+                        <div>TITULAR<br><strong>MORGANA</strong></div>
+                        <div>SALDO<br><strong>R$ 5.432,10</strong></div>
+                    </div>
+                </div>
+
+                <div class="credit-card inter">
+                    <div class="card-top">INTER</div>
+                    <div class="card-number">•••• •••• •••• 9954</div>
+                    <div class="card-bottom">
+                        <div>TITULAR<br><strong>MORGANA</strong></div>
+                        <div>SALDO<br><strong>R$ 5.090,55</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="area-transferencia" class="form-pix">
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Transferência Bancária</legend>
+                    
+                    <div class="input-block">
+                        <label for="valor-transacao">Valor do repasse (R$):</label>
+                        <input type="number" id="valor-transacao" name="valor" step="0.01" required placeholder="0,00">
+                    </div>
+
+                    <div class="input-block">
+                        <label for="banco-destino">Instituição Bancária:</label>
+                        <select id="banco-destino" name="banco" required>
+                            <option value="" disabled selected>Escolha o banco</option>
+                            <option value="341">Itaú Unibanco</option>
+                            <option value="237">Bradesco</option>
+                            <option value="033">Santander</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirmar Operação</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="transacoes-box">
+    <div class="section-header">
+        <h3>Últimas Transações</h3>
+        <a href="#">Ver tudo ></a>
+    </div>
+    
+    <div class="tabela-container">
+        <table class="tabela-extrato">
+            <thead class="hidden">
+                <tr>
+                    <th>Categoria</th>
+                    <th>Descrição / Data</th>
+                    <th>Montante</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="icon-indigo-badge"><div class="badge-round">🛒</div></td>
+                    <td>
+                        <span class="txt-titulo">Supermercado Pão de Açú...</span>
+                        <span class="txt-subtitulo">Supermercado · Hoje</span>
+                    </td>
+                    <td class="txt-valor negativo">-R$ 347,80</td>
+                </tr>
+                <tr>
+                    <td class="icon-emerald-badge"><div class="badge-round">↙</div></td>
+                    <td>
+                        <span class="txt-titulo">Salário Junho</span>
+                        <span class="txt-subtitulo">Salário · Hoje</span>
+                    </td>
+                    <td class="txt-valor positivo">+R$ 8.500,00</td>
+                </tr>
+                <tr>
+                    <td class="icon-purple-badge"><div class="badge-round">☕</div></td>
+                    <td>
+                        <span class="txt-titulo">iFood — Pizzaria da Vila</span>
+                        <span class="txt-subtitulo">Café · Ontem</span>
+                    </td>
+                    <td class="txt-valor negativo">-R$ 62,50</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+    </main>
+
+</body>
+</html>
